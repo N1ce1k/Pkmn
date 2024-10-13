@@ -1,4 +1,9 @@
 package ru.mirea.SichinskiyLE;
 
-public enum PokemonStage {
+import java.io.Serializable;
+
+public enum PokemonStage implements Serializable
+{
+    BASIC, STAGE1, STAGE2, VSTAR, VMAX;
 }
+

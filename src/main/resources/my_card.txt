@@ -1,0 +1,12 @@
+STAGE2
+Hisuian Goodra
+160
+DRAGON
+C:\Users\lsich\IdeaProjects\Pkmn\src\main\resources\evolves_from.txt
+Water Metal Colorless / Heavy Impact / 140
+-
+-
+Colorless, Colorless, Colorless
+Lost Origin
+F
+Сичинский / Леонард / Эдуардович / БСБО-06-23
