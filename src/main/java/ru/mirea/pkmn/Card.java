@@ -7,52 +7,52 @@ import java.util.stream.Collectors;
 public class Card implements Serializable
 {
     private static final long serialVersionUID = 1L;
-    private PokemonStage stage;
+    private PokemonStage pokemonStage;
     private String name;
     private int hp;
-    private EnergyType type;
+    private EnergyType pokemonType;
     private Card evolvesFrom;
     private List<AttackSkill> skills;
-    private EnergyType weakness;
-    private EnergyType resistance;
+    private EnergyType weaknessType;
+    private EnergyType resistanceType;
     private String retreatCost;
-    private String setName;
+    private String gameSet;
     private char regulationMark;
-    private Student owner;
+    private Student pokemonOwner;
 
-    public Card(PokemonStage stage, String name, int hp, EnergyType type, Card evolvesFrom,
-                List<AttackSkill> skills, EnergyType weakness, EnergyType resistance,
-                String retreatCost, String setName, char regulationMark, Student owner)
+    public Card(PokemonStage pokemonStage, String name, int hp, EnergyType pokemonType, Card evolvesFrom,
+                List<AttackSkill> skills, EnergyType weaknessType, EnergyType resistanceType,
+                String retreatCost, String gameSet, char regulationMark, Student pokemonOwner)
     {
-        this.stage = stage;
+        this.pokemonStage = pokemonStage;
         this.name = name;
         this.hp = hp;
-        this.type = type;
+        this.pokemonType = pokemonType;
         this.evolvesFrom = evolvesFrom;
         this.skills = skills;
-        this.weakness = weakness;
-        this.resistance = resistance;
+        this.weaknessType = weaknessType;
+        this.resistanceType = resistanceType;
         this.retreatCost = retreatCost;
-        this.setName = setName;
+        this.gameSet = gameSet;
         this.regulationMark = regulationMark;
-        this.owner = owner;
+        this.pokemonOwner = pokemonOwner;
     }
 
     @Override
     public String toString()
     {
-        return "Stage: " + stage +
+        return "Stage: " + pokemonStage +
                 "\nName: " + name +
                 "\nHP: " + hp +
-                "\nType: " + type +
-                "\nEvolves From: " + (evolvesFrom != null ? evolvesFrom.getName() : "-") +
+                "\nType: " + pokemonType +
+                "\nEvolves From: " + (evolvesFrom != null ? evolvesFrom: "-") +
                 "\nSkills: " + (skills.isEmpty() ? "-" : skills.stream().map(AttackSkill::toString).collect(Collectors.joining(", "))) +
-                "\nWeakness: " + (weakness != null ? weakness : "-") +
-                "\nResistance: " + (resistance != null ? resistance : "-") +
+                "\nWeakness: " + (weaknessType != null ? weaknessType : "-") +
+                "\nResistance: " + (resistanceType != null ? resistanceType : "-") +
                 "\nRetreat Cost: " + retreatCost +
-                "\nSet: " + setName +
+                "\nSet: " + gameSet +
                 "\nRegulation Mark: " + regulationMark +
-                "\nOwner: " + (owner != null ? owner.toString() : "Unknown");
+                "\nOwner: " + (pokemonOwner != null ? pokemonOwner.toString() : "Unknown");
     }
 
     public String getName()

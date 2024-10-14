@@ -60,14 +60,14 @@ public class CardImport
             char regulationMark = reader.readLine().charAt(0);
 
             String ownerLine = reader.readLine();
-            Student owner = null;
+            Student pokemonowner = null;
             if (ownerLine != null) {
                 String[] ownerData = ownerLine.split(" / ");
                 if (ownerData.length == 4) {
-                    owner = new Student(ownerData[0], ownerData[1], ownerData[2], ownerData[3]);
+                    pokemonowner = new Student(ownerData[0], ownerData[1], ownerData[2], ownerData[3]);
                 }
             }
-            return new Card(stage, name, hp, type, evolvesFrom, skills, weakness, resistance, retreatCost, setName, regulationMark, owner);
+            return new Card(stage, name, hp, type, evolvesFrom, skills, weakness, resistance, retreatCost, setName, regulationMark, pokemonowner);
         }
         catch (IOException e)
         {
