@@ -1,4 +1,6 @@
-package ru.mirea.SichinskiyLE;
+package ru.mirea.pkmn.SichinskiyLE;
+
+import ru.mirea.pkmn.Card;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

@@ -1,4 +1,6 @@
-package ru.mirea.SichinskiyLE;
+package ru.mirea.pkmn.SichinskiyLE;
+
+import ru.mirea.pkmn.*;
 
 import java.io.*;
 import java.util.ArrayList;
