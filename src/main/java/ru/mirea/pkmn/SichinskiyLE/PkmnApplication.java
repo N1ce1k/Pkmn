@@ -10,19 +10,14 @@ import java.sql.SQLException;
 public class PkmnApplication {
     public static void main(String[] args) {
         try {
-            // Создание экземпляра HTTP клиента
             PkmnHttpClient httpClient = new PkmnHttpClient();
 
-            // Создание экземпляра сервиса базы данных
             DatabaseServiceImpl db = new DatabaseServiceImpl();
 
-            // Импорт карты из файла
             Card myCard = CardImport.importCard("src/main/resources/my_card.txt");
 
-            // Обновление атакующих навыков карты
             CardImport.updateAttackSkill(myCard, httpClient);
 
-            // Сохранение карты в базе данных
             db.saveCardToDatabase(myCard);
             System.out.println("Карта успешно сохранена в базе данных.");
         } catch (IOException e) {
